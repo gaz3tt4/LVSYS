@@ -7,4 +7,15 @@
   </svg> --}}
 
 
-  <img src="{{ asset('logo/LVLogo.png') }}" width="200" />
+  <link href='https://fonts.googleapis.com/css?family=Agbalumo' rel='stylesheet'>
+  <style>
+        h1 {
+          font-family: 'Agbalumo';font-size: 40px; text-align: center
+        }
+        </style>
+ <div>
+     <h1 class=" sm:justifify-center itens-center text-4xl text-gray-800 dark:text-gray-200">LovLav</h1>
+</div>
+<div>
+    <img src="{{ asset('logo/LVLogo.png') }}" width="200" />
+</div>
