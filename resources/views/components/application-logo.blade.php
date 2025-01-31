@@ -7,4 +7,4 @@
   </svg> --}}
 
 
-  <img src="{{ asset('logo/2.jpg') }}" width="200"/>
+  <img src="{{ asset('logo/LVLogo.png') }}" width="200" />

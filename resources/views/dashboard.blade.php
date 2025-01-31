@@ -3,10 +3,10 @@
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
         </h2>
     </x-slot>
-        <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="p-6 text-gray-900 dark:text-gray-100">
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900 dark:text-gray-100">
                         <H1>Contrato de Namoro</H1>
                         <p>Lav</p>
                         <p>quando penso em ti,</p>
@@ -24,12 +24,13 @@
                         <p>Nossa quimica é inexplicavel, unidos de mente, corpo e alma.</p>
                         <p>Chegou o momento de fazermos uma escolha, e eu ja fiz a minha, agora quero saber de você:</p>
                         <p>Gostaria de dividir a minha vida com você, oque acha ?</p>
-                        <div>
+
+
+
+                        <div class="mt-4">
                             <a href="/index">
                                 <x-primary-button>Aceito</x-primary-button>
                             </a>
-                        </div>
-                        <div class="mt-4">
                             <x-danger-button>Não</x-danger-button>
                         </div>
                     </div>
