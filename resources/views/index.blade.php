@@ -4,13 +4,15 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <div class="flex justify-center">
-                        <img src="{{ asset('logo/weS2.png') }}" width="100"/>
+                        <img class="border-4 border-black" src="{{ asset('logo/weS2.png') }}" width="200"/>
                     </div>
                     <div>
-                        <h1>Vem viver o nosso felizes para sempre!!</h1>
+                        <h2>Vem viver o nosso felizes para sempre!!</h2>
                     </div>
-                    <div>
-                        <a href="/login" class="btn btn-primary">Entrar</a>
+                    <div class="flex justify-center">
+                        <a href="/login" class="btn btn-primary">
+                            <x-primary-button>voltar</x-primary-button>
+                        </a>
                     </div>
                 </div>
             </div>

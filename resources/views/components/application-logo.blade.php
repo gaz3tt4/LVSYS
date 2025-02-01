@@ -12,6 +12,9 @@
         h1 {
           font-family: 'Agbalumo';font-size: 40px; text-align: center
         }
+        h2{
+          font-family: 'Agbalumo';font-size: 15px; text-align: center
+        }
         </style>
  <div>
      <h1 class=" sm:justifify-center itens-center text-4xl text-gray-800 dark:text-gray-200">LovLav</h1>

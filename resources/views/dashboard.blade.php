@@ -8,63 +8,66 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                         <H1>Contrato de Namoro</H1>
-                        <p>Pelo presente instrumento, fica estabelecido o presente Contrato de Namoro entre as partes:
+                        <p>Contratante 1: Lavínia Marques, doravante denominado(a) "Namorada".</p>
 
-                            Contratante 1: [Nome do(a) namorado(a) 1], doravante denominado(a) "Parte A".
+                        <p>Contratante 2: Lucas Gazetta, doravante denominado(a) "Namorado".</p><br>
 
-                            Contratante 2: [Nome do(a) namorado(a) 2], doravante denominado(a) "Parte B".
+                        <h2>Considerando que:</h2>
 
-                            Considerando que:
+                        <p>Ambas as partes decidiram de forma espontânea, livre e desimpedida embarcar em uma relação amorosa;</p>
 
-                            Ambas as partes decidiram de forma espontânea, livre e desimpedida embarcar em uma relação amorosa;
+                        <p>O objetivo deste contrato é garantir que o namoro seja recheado de carinho, respeito e, principalmente, diversão;</p>
 
-                            O objetivo deste contrato é garantir que o namoro seja recheado de carinho, respeito e, principalmente, diversão;
+                        <p>Nenhuma das partes quer lidar com DRs desnecessárias e sabe que bom humor é essencial;</p>
 
-                            Nenhuma das partes quer lidar com DRs desnecessárias e sabe que bom humor é essencial;
+                        <p>As partes resolvem estabelecer as seguintes cláusulas e condições:</p>
 
-                            As partes resolvem estabelecer as seguintes cláusulas e condições:
+                        <h2>Cláusula 1 - Do Beijo Obrigatório</h2>
 
-                            Cláusula 1 - Do Beijo Obrigatório
+                        <p>1.1. Nenhuma das partes poderá negar beijos ao longo do relacionamento, salvo nos casos de gripe forte, bafo de cebola ou em situações de força maior (exemplo: se um zumbi estiver atacando).</p>
 
-                            1.1. Nenhuma das partes poderá negar beijos ao longo do relacionamento, salvo nos casos de gripe forte, bafo de cebola ou em situações de força maior (exemplo: se um zumbi estiver atacando).
+                        <h2>Cláusula 2 - Do Direito ao Cafuné</h2>
 
-                            Cláusula 2 - Do Direito ao Cafuné
+                        <p>2.1. Fica estabelecido o direito irrevogável de solicitar cafuné a qualquer momento, salvo quando a outra parte estiver cozinhando, dirigindo ou segurando algo extremamente perigoso (exemplo: um filhote de tigre).</p>
 
-                            2.1. Fica estabelecido o direito irrevogável de solicitar cafuné a qualquer momento, salvo quando a outra parte estiver cozinhando, dirigindo ou segurando algo extremamente perigoso (exemplo: um filhote de tigre).
+                        <h2>Cláusula 3 - Do Compartilhamento de Comida</h2>
 
-                            Cláusula 3 - Do Compartilhamento de Comida
+                        <p>3.1. Qualquer comida adquirida por uma das partes deverá ser oferecida para compartilhamento com a outra, exceto em casos de extrema fome ou quando a comida for claramente destinada à sobrevivência.
+                        3.2. Furtar batatas fritas do prato da outra parte não será considerado crime, mas deve ser feito com moderação.</p>
 
-                            3.1. Qualquer comida adquirida por uma das partes deverá ser oferecida para compartilhamento com a outra, exceto em casos de extrema fome ou quando a comida for claramente destinada à sobrevivência.
-                            3.2. Furtar batatas fritas do prato da outra parte não será considerado crime, mas deve ser feito com moderação.
+                        <h2>Cláusula 4 - Do Direito de Usar Roupa do Outro</h2>
 
-                            Cláusula 4 - Do Direito de Usar Roupa do Outro
+                        <p>4.1. A Parte A tem o direito de usar os moletons da Parte B sempre que desejar.</p>
+                        <p>4.2. A Parte B poderá, em contrapartida, requisitar o uso de cobertores em noites frias.</p>
 
-                            4.1. A Parte A tem o direito de usar os moletons da Parte B sempre que desejar.
-                            4.2. A Parte B poderá, em contrapartida, requisitar o uso de cobertores em noites frias.
+                        <h2>Cláusula 5 - Da Responsabilidade pelo Bom Humor</h2>
 
-                            Cláusula 5 - Da Responsabilidade pelo Bom Humor
+                        <p>5.1. Ambas as partes se comprometem a fazer o outro rir pelo menos uma vez ao dia, utilizando memes, piadas internas ou danças ridículas.</p>
 
-                            5.1. Ambas as partes se comprometem a fazer o outro rir pelo menos uma vez ao dia, utilizando memes, piadas internas ou danças ridículas.
+                        <h2>Cláusula 6 - Da Maratona de Séries</h2>
 
-                            Cláusula 6 - Da Maratona de Séries
+                        <p>6.1. É estritamente proibido assistir a um episódio de uma série que ambos começaram juntos sem a presença do outro.</p>
+                        <p>6.2. A traição de série será punida com a obrigação de fazer uma declaração pública de culpa.</p>
 
-                            6.1. É estritamente proibido assistir a um episódio de uma série que ambos começaram juntos sem a presença do outro.
-                            6.2. A traição de série será punida com a obrigação de fazer uma declaração pública de culpa.
+                        <h2>Cláusula 7 - Da Tolerância ao Ronco</h2>
 
-                            Cláusula 7 - Da Tolerância ao Ronco
+                        <p>7.1. Caso uma das partes ronque, a outra parte terá o direito de dar leves cutucões, porém nunca superiores a três tentativas por noite.</p>
 
-                            7.1. Caso uma das partes ronque, a outra parte terá o direito de dar leves cutucões, porém nunca superiores a três tentativas por noite.
+                        <h2>Cláusula 8 - Das Datas Importantes</h2>
 
-                            Cláusula 8 - Das Datas Importantes
+                        <p>8.1. Nenhuma das partes poderá esquecer datas importantes, como aniversários e datas comemorativas do relacionamento, sob pena de ficar responsável por um jantar romântico ou sessão de massagem.</p>
 
-                            8.1. Nenhuma das partes poderá esquecer datas importantes, como aniversários e datas comemorativas do relacionamento, sob pena de ficar responsável por um jantar romântico ou sessão de massagem.
+                        <h2>Cláusula 9 - Da Quebra de Contrato</h2>
 
-                            Cláusula 9 - Da Quebra de Contrato
+                        <p>9.1. O contrato poderá ser rompido caso o relacionamento deixe de cumprir os objetivos de carinho, respeito e diversão.</p>
+                        <p>9.2. Em caso de término, os memes e figurinhas trocadas poderão ser guardados, desde que não sejam usados contra a outra parte.</p>
 
-                            9.1. O contrato poderá ser rompido caso o relacionamento deixe de cumprir os objetivos de carinho, respeito e diversão.
-                            9.2. Em caso de término, os memes e figurinhas trocadas poderão ser guardados, desde que não sejam usados contra a outra parte.
+                        <p>E, por estarem assim justos e acertados, as partes assinam o presente contrato com um beijo de confirmação. </p>
+                        <p>😘beijo de confirmação. 😘</p>
 
-                            E, por estarem assim justos e acertados, as partes assinam o presente contrato com um beijo de confirmação. 😘</p>
+
+
+
                         {{-- <p>Lav</p>
                         <p>quando penso em ti,</p>
                         <p>penso em bondade</p>
