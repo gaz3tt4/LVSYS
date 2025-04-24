@@ -3,16 +3,21 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <div class="flex justify-center">
-                        <img class="border-4 border-black" src="{{ asset('logo/weS2.png') }}" width="200"/>
-                    </div>
                     <div>
-                        <h2>Vem viver o nosso felizes para sempre!!</h2>
-                    </div>
-                    <div class="flex justify-center">
-                        <a href="/login" class="btn btn-primary">
-                            <x-primary-button>voltar</x-primary-button>
-                        </a>
+                        <div class="mt-4">
+                            <a href="{{ route('contrato') }}">
+                                <x-primary-button>Contrato</x-primary-button>
+                            </a>
+                        </div>
+                        <div class="mt-4">
+                            <x-primary-button>Galery</x-primary-button>
+                        </div>
+                        <div class="mt-4">
+                            <x-primary-button>Movies</x-primary-button>
+                        </div>
+                        <div>
+                            <x-count-days></x-count-days>
+                        </div>
                     </div>
                 </div>
             </div>

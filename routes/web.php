@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+    return view('contrato');
+})->middleware(['auth', 'verified'])->name('contrato');
 
 Route::middleware('auth')->group(function () {
     Route::get('/index', [ProfileController::class, 'index'])->name('index');
