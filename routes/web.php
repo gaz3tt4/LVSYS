@@ -8,12 +8,17 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function () {
+<<<<<<< HEAD
    return viw ('index');
 })->middleware(['auth', 'verified'])->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+=======
+    return view('contrato');
+})->middleware(['auth', 'verified'])->name('contrato');
+>>>>>>> 317f1f1bdbf32cdeb1af213fa6e188b471ceaa92
 
 // Route::middleware('auth')->group(function () {
 //     Route::get('/index', [ProfileController::class, 'index'])->name('index');
