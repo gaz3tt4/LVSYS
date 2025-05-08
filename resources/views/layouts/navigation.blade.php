@@ -13,14 +13,11 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('index')" :active="request()->routeIs('index')">
-<<<<<<< HEAD
-=======
                         {{ __('Index') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('contrato')" :active="request()->routeIs('contrato')">
->>>>>>> 317f1f1bdbf32cdeb1af213fa6e188b471ceaa92
                         {{ __('Contrato') }}
                     </x-nav-link>
                 </div>
@@ -77,13 +74,11 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-<<<<<<< HEAD
             <x-responsive-nav-link :href="route('index')" :active="request()->routeIs('index')">
                 {{ __('index') }}
-=======
+            </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('contrato')" :active="request()->routeIs('contrato')">
                 {{ __('contrato') }}
->>>>>>> 317f1f1bdbf32cdeb1af213fa6e188b471ceaa92
             </x-responsive-nav-link>
         </div>
 

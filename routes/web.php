@@ -5,24 +5,21 @@ use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
 //     return view('welcome');
-// });
-
+// })
 Route::get('/', function () {
-<<<<<<< HEAD
-   return viw ('index');
-})->middleware(['auth', 'verified'])->name('home');
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-=======
+    return view('index');
+})-> name('index') -> middleware('auth');
+Route::get('/contrato', function () {
     return view('contrato');
-})->middleware(['auth', 'verified'])->name('contrato');
->>>>>>> 317f1f1bdbf32cdeb1af213fa6e188b471ceaa92
+})-> name('contrato')-> middleware('auth');
+Route::get('/welcome', function () {
+    return view('welcome');
+})-> name('welcome')-> middleware('auth');
 
-// Route::middleware('auth')->group(function () {
-//     Route::get('/index', [ProfileController::class, 'index'])->name('index');
-// });
+Route::middleware('auth')->group(function () {
+    Route::get('/index', [ProfileController::class, 'index'])->name('index');
+    Route::get('/welcome', [ProfileController::class, 'index'])->name('welcome');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
