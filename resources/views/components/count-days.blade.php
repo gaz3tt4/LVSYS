@@ -1,74 +1,103 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+@props(['date'])
 
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Agbalumo' rel='stylesheet'>
-  <style>
-        h1 {
-          font-family: 'Agbalumo';font-size: 40px; text-align: center
-        }
-        h2{
-          font-family: 'Agbalumo';font-size: 15px; text-align: center
-        }
-        </style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<div>
-    <h1>Juntos a exatos:</h1>
-</div>
+<style>
+    body {
+        background-color: #235a91;
+    }
+
+    h1, h2 {
+        font-family: 'Agbalumo', sans-serif;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 40px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .time-box {
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        padding: 30px;
+        text-align: center;
+    }
+
+    .time-box .unit {
+        font-size: 16px;
+        font-weight: bold;
+        color: #6c757d;
+    }
+
+    .time-box .value {
+        font-size: 40px;
+        font-weight: bold;
+        color: #343a40;
+    }
+
+    #time-up {
+        font-size: 20px;
+        margin-top: 20px;
+        color: red;
+    }
+</style>
 
 <div class="container">
-   <div class="row">
-      <div class="col-lg-6 offset-3">
-         <div class="timer">
-            <div >
-                <div class="smalltext">Days:
-                    <span class="days" id="day"></span>
+    <h1>Juntos há exatos:</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="time-box d-flex justify-content-around">
+                <div>
+                    <div class="unit">Dias</div>
+                    <div class="value" id="day">0</div>
+                </div>
+                <div>
+                    <div class="unit">Horas</div>
+                    <div class="value" id="hour">0</div>
+                </div>
+                <div>
+                    <div class="unit">Minutos</div>
+                    <div class="value" id="minute">0</div>
+                </div>
+                <div>
+                    <div class="unit">Segundos</div>
+                    <div class="value" id="second">0</div>
                 </div>
             </div>
-            <div>
-                <div class="smalltext">Hours:
-                    <span class="hours" id="hour"></span>
-                </div>
-            </div>
-            <div>
-                <div class="smalltext">Minutes:
-                    <span class="minutes" id="minute"></span>
-                </div>
-            </div>
-            <div>
-                <div class="smalltext">Seconds:
-                    <span class="seconds" id="second"></span>
-                </div>
-            </div>
-            <p id="time-up"></p>
-         </div>
-      </div>
-   </div>
+            <p id="time-up" class="text-center"></p>
+        </div>
+    </div>
 </div>
-<script type="text/javascript">
-var deadline = new Date("January 12, 2025 01:30:25").getTime();
-var x = setInterval(function() {
-   var currentTime = new Date().getTime();
-   var t = currentTime - deadline;
-   var days = Math.floor(t / (1000 * 60 * 60 * 24));
-   var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
-   var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-   var seconds = Math.floor((t % (1000 * 60)) / 1000);
-   document.getElementById("day").innerHTML =days ;
-   document.getElementById("hour").innerHTML =hours;
-   document.getElementById("minute").innerHTML = minutes;
-   document.getElementById("second").innerHTML =seconds;
-   if (t < 0) {
-      clearInterval(x);
-      document.getElementById("time-up").innerHTML = "TIME UP";
-      document.getElementById("day").innerHTML ='0';
-      document.getElementById("hour").innerHTML ='0';
-      document.getElementById("minute").innerHTML ='0' ;
-      document.getElementById("second").innerHTML = '0';
-   }
-}, 1000);
 
+<script>
+    var deadline = new Date("{{ $date ?? '2025-01-12T01:30:25' }}").getTime();
 
+    var x = setInterval(function() {
+        var currentTime = new Date().getTime();
+        var t = currentTime - deadline;
+
+        var days = Math.floor(t / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((t % (1000 * 60)) / 1000);
+
+        document.getElementById("day").innerText = days;
+        document.getElementById("hour").innerText = hours;
+        document.getElementById("minute").innerText = minutes;
+        document.getElementById("second").innerText = seconds;
+
+        if (t < 0) {
+            clearInterval(x);
+            document.getElementById("time-up").innerHTML = "O tempo ainda não começou.";
+            document.getElementById("day").innerHTML = '0';
+            document.getElementById("hour").innerHTML = '0';
+            document.getElementById("minute").innerHTML = '0';
+            document.getElementById("second").innerHTML = '0';
+        }
+    }, 1000);
 </script>
