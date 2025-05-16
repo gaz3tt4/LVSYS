@@ -16,6 +16,18 @@ Route::get('/welcome', function () {
     return view('welcome');
 })-> name('welcome')-> middleware('auth');
 
+Route::get('/galery', function () {
+    return view('galery');
+})-> name('galery')-> middleware('auth');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/galery', [ProfileController::class, 'index'])->name('galery.index');
+    Route::post('/galeryInsert', [ProfileController::class, 'store'])->name('galery.store');
+    Route::get('/galeryDelete/{id}', [ProfileController::class, 'destroy'])->name('galery.destroy');
+});
+
+
+
 Route::middleware('auth')->group(function () {
     Route::get('/index', [ProfileController::class, 'index'])->name('index');
     Route::get('/welcome', [ProfileController::class, 'index'])->name('welcome');
