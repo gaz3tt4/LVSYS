@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\GalleryController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -16,14 +17,14 @@ Route::get('/welcome', function () {
     return view('welcome');
 })-> name('welcome')-> middleware('auth');
 
-Route::get('/galery', function () {
-    return view('galery');
-})-> name('galery')-> middleware('auth');
+// Route::get('/gallery', function () {
+//     return view('gallery');
+// })-> name('gallery')-> middleware('auth');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/galery', [ProfileController::class, 'index'])->name('galery.index');
-    Route::post('/galeryInsert', [ProfileController::class, 'store'])->name('galery.store');
-    Route::get('/galeryDelete/{id}', [ProfileController::class, 'destroy'])->name('galery.destroy');
+    Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
+    Route::post('/galeryStore', [GalleryController::class, 'store'])->name('gallery.store');
+    Route::get('/galeryDelete/{id}', [GalleryController::class, 'destroy'])->name('gallery.destroy');
 });
 
 

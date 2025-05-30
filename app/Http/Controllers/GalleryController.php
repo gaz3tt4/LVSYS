@@ -6,18 +6,20 @@ use App\Models\galery;
 use App\Http\Requests\StoregaleryRequest;
 use App\Http\Requests\UpdategaleryRequest;
 
-class GaleryController extends Controller
+class GalleryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        $galery = galery::all();
-        return view('galery', [
-            'galery' => $galery
-        ]);
+    public function index(){
+        return view('gallery');
     }
+    //     $photos = ::all();
+
+    //     return view('gallery', [
+    //         'photos' => $photos
+    //     ]);
+    // }
 
     /**
      * Show the form for creating a new resource.
@@ -36,6 +38,7 @@ class GaleryController extends Controller
         $galery->image = $request->image;
         $galery->url = $request->url;
         $galery->save();
+        return redirect()->index();
     }
 
     /**
