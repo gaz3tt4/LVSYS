@@ -12,7 +12,11 @@ class GalleryController extends Controller
      * Display a listing of the resource.
      */
     public function index(){
-        return view('gallery');
+        $galery = galery::all();
+        return view('gallery', [
+            'galery' => $galery
+        ]);
+
     }
     //     $photos = ::all();
 
@@ -34,11 +38,20 @@ class GalleryController extends Controller
      */
     public function store(Reqyuest $request)
     {
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
         $galery = new galery();
-        $galery->image = $request->image;
-        $galery->url = $request->url;
+        // $request -> file('ImagesUpload'){
+        //     //$imageName = time(). '.' . $request->image->extension();
+        //     $request->image->move(public_path('/ImagesUpload'), $imageName);
+        //     $galery->image = $imageName;
+        // }
+        // $galery->image = ;
+        $galery->url = $request->input('url');
         $galery->save();
-        return redirect()->index();
+        return massage('Image uploaded')->index();
     }
 
     /**

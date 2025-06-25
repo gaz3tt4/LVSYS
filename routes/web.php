@@ -23,7 +23,7 @@ Route::get('/welcome', function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
-    Route::post('/galeryStore', [GalleryController::class, 'store'])->name('gallery.store');
+    Route::post('/galleryStore', [GalleryController::class, 'store'])->name('gallery.store');
     Route::get('/galeryDelete/{id}', [GalleryController::class, 'destroy'])->name('gallery.destroy');
 });
 

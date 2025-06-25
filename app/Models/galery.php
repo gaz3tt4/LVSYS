@@ -10,7 +10,7 @@ class galery extends Model
     /** @use HasFactory<\Database\Factories\GaleryFactory> */
     use HasFactory;
 
-    protected $table = 'galery';
+    protected $table = 'gallery';
 
     protected $fillable = [
         'Id',

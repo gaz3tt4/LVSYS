@@ -19,6 +19,8 @@
 </style>
 
 <div class="input-group">
-  <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-  <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04" @method("POST") action = "{{ route('galery.store') }}" >Upload</button>
+    <button class="btn btn-outline-secondary" type="button" id="ImageInput" action="{{route('gallery.store')}}">
+      <input type="file" class="form-control" id="ImageInput" aria-describedby= aria-label="Upload">
+      Upload
+  </button>
 </div>
