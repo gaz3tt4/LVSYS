@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\galery;
+use App\Models\gallery;
 use App\Http\Requests\StoregaleryRequest;
 use App\Http\Requests\UpdategaleryRequest;
 
@@ -12,9 +12,9 @@ class GalleryController extends Controller
      * Display a listing of the resource.
      */
     public function index(){
-        $galery = galery::all();
+        $gallery = gallery::all();
         return view('gallery', [
-            'galery' => $galery
+            'gallery' => $gallery
         ]);
 
     }
@@ -30,7 +30,7 @@ class GalleryController extends Controller
      */
     public function create()
     {
-        return view('galery');
+        return view('gallery');
     }
 
     /**
@@ -42,22 +42,22 @@ class GalleryController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        $galery = new galery();
+        $gallery = new gallery();
         // $request -> file('ImagesUpload'){
         //     //$imageName = time(). '.' . $request->image->extension();
         //     $request->image->move(public_path('/ImagesUpload'), $imageName);
-        //     $galery->image = $imageName;
+        //     $gallery->image = $imageName;
         // }
-        // $galery->image = ;
-        $galery->url = $request->input('url');
-        $galery->save();
+        // $gallery->image = ;
+        $gallery->url = $request->input('url');
+        $gallery->save();
         return massage('Image uploaded')->index();
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(galery $galery)
+    public function show(gallery $gallery)
     {
         //
     }
@@ -65,7 +65,7 @@ class GalleryController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(galery $galery)
+    public function edit(gallery $gallery)
     {
         //
     }
@@ -73,7 +73,7 @@ class GalleryController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdategaleryRequest $request, galery $galery)
+    public function update(UpdategalleryRequest $request, gallery $gallery)
     {
         //
     }
@@ -81,7 +81,7 @@ class GalleryController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(galery $galery)
+    public function destroy(gallery $gallery)
     {
         //
     }
