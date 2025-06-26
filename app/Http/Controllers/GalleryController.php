@@ -43,12 +43,12 @@ class GalleryController extends Controller
         ]);
 
         $gallery = new gallery();
-        // $request -> file('ImagesUpload'){
-        //     //$imageName = time(). '.' . $request->image->extension();
-        //     $request->image->move(public_path('/ImagesUpload'), $imageName);
-        //     $gallery->image = $imageName;
-        // }
-        // $gallery->image = ;
+        $request -> file('ImagesUpload'){
+            $imageName = time(). '.' . $request->image->extension();
+            $request->image->move(public_path('/ImagesUpload'), $imageName);
+            $gallery->image = $imageName;
+        }
+        $gallery->image = ;
         $gallery->url = $request->input('url');
         $gallery->save();
         return massage('Image uploaded')->index();
