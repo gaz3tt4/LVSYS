@@ -5,20 +5,22 @@ namespace App\Http\Controllers;
 use App\Models\gallery;
 use App\Http\Requests\StoregaleryRequest;
 use App\Http\Requests\UpdategaleryRequest;
+use Illuminate\Http\Request;
 
 class GalleryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
+    //     $photos = ::all();
     public function index(){
-        $gallery = gallery::all();
+        $gallerys = gallery::all();
+
         return view('gallery', [
-            'gallery' => $gallery
+            'gallerys' => $gallerys
         ]);
 
     }
-    //     $photos = ::all();
 
     //     return view('gallery', [
     //         'photos' => $photos
@@ -36,22 +38,31 @@ class GalleryController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Reqyuest $request)
+    public function upload(Request $request)
     {
-        $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
 
         $gallery = new gallery();
-        $request -> file('ImagesUpload'){
-            $imageName = time(). '.' . $request->image->extension();
-            $request->image->move(public_path('/ImagesUpload'), $imageName);
-            $gallery->image = $imageName;
-        }
-        $gallery->image = ;
-        $gallery->url = $request->input('url');
+       if ($request->hasFile('imagem') && $request->file('imagem')->isValid()) {
+        $imagem = $request->file('imagem');
+
+        // Gera um nome único para o arquivo
+        $nameImage = uniqid() . '.' . $imagem->getClientOriginalExtension();
+
+        // Salva na pasta 'public/imagens'
+        $url = $imagem->storeAs('imagens', $nameImage, 'public');
+
+        // Exemplo: salvar no banco (opcional)
+        // Imagem::create(['caminho' => $caminho]);
+        $gallery->url = $url;
+        $gallery->image = $nameImage;
         $gallery->save();
-        return massage('Image uploaded')->index();
+
+        return back()->with('success', 'Imagem salva com sucesso!');
+        }
+        $gallery->url = $url;
+        $gallery->image = $nameImage;
+        $gallery->save();
+        return  back()->withErrors(['imagem' => 'Erro ao fazer upload da imagem.']);
     }
 
     /**
