@@ -12,11 +12,15 @@
                         <div>
                             <x-galery_bar></x-galery_bar>
                         </div>
-                        @foreach ($gallerys as $gallery)
                         <div>
-                            <img src="{{ asset('storage/app/public/imagens/' . $gallery->url) }}" alt="Imagem enviada">
+                            @foreach ($gallerys as $gallery)
+                                <div class="mt-4">
+                                    <div>
+                                        <img src="{{ asset('storage/' . $gallery->url) }}" alt="Imagem">
+                                    </div>
+                                </div>
+                            @endforeach
                         </div>
-                        @endforeach
                     </div>
                 </div>
             </div>

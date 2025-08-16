@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('galleryes', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('url', 200);
+            $table->string('Image', 50);
+            $table->timestamps('criate_at');
         });
     }
 

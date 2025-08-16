@@ -43,13 +43,14 @@ class GalleryController extends Controller
 
         $gallery = new gallery();
        if ($request->hasFile('imagem') && $request->file('imagem')->isValid()) {
-        $imagem = $request->file('imagem');
+        // $imagem = $request->file('imagem');
 
-        // Gera um nome único para o arquivo
-        $nameImage = uniqid() . '.' . $imagem->getClientOriginalExtension();
+        // // Gera um nome único para o arquivo
+        // $nameImage = uniqid() . '.' . $imagem->getClientOriginalExtension();
 
         // Salva na pasta 'public/imagens'
-        $url = $imagem->storeAs('imagens', $nameImage, 'public');
+        $url = $request->file('imagem')->store( 'imagens','public' );
+        $nameImage = $request->file('imagem')->getClientOriginalName();
 
         // Exemplo: salvar no banco (opcional)
         // Imagem::create(['caminho' => $caminho]);
