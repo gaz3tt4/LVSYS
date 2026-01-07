@@ -53,6 +53,10 @@
         <div class="col-md-8">
             <div class="time-box d-flex justify-content-around">
                 <div>
+                    <div class="unit">Anos</div>
+                    <div class="value" id="year">0</div>
+                </div>
+                <div>
                     <div class="unit">Dias</div>
                     <div class="value" id="day">0</div>
                 </div>
@@ -80,12 +84,13 @@
     var x = setInterval(function() {
         var currentTime = new Date().getTime();
         var t = currentTime - deadline;
-
+        var yars = Math.floor(t / (1000 * 60 * 60 * 24 * 365));
         var days = Math.floor(t / (1000 * 60 * 60 * 24));
         var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((t % (1000 * 60)) / 1000);
 
+        document.getElementById("year").innerText = yars;
         document.getElementById("day").innerText = days;
         document.getElementById("hour").innerText = hours;
         document.getElementById("minute").innerText = minutes;
@@ -94,6 +99,7 @@
         if (t < 0) {
             clearInterval(x);
             document.getElementById("time-up").innerHTML = "O tempo ainda não começou.";
+            document.getElementById("year").innerHTML = '0';
             document.getElementById("day").innerHTML = '0';
             document.getElementById("hour").innerHTML = '0';
             document.getElementById("minute").innerHTML = '0';
