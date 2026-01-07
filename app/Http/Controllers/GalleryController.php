@@ -43,11 +43,17 @@ class GalleryController extends Controller
 
         $gallery = new gallery();
        if ($request->hasFile('imagem') && $request->file('imagem')->isValid()) {
+        // $imagem = $request->file('imagem');
 
+        // // Gera um nome único para o arquivo
+        // $nameImage = uniqid() . '.' . $imagem->getClientOriginalExtension();
 
         // Salva na pasta 'public/imagens'
         $url = $request->file('imagem')->store( 'imagens','public' );
-        $nameImage = $request->input('descricao');
+        $nameImage = $request->file('imagem')->getClientOriginalName();
+
+        // Exemplo: salvar no banco (opcional)
+        // Imagem::create(['caminho' => $caminho]);
         $gallery->url = $url;
         $gallery->image = $nameImage;
         $gallery->save();
@@ -87,10 +93,8 @@ class GalleryController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(gallery $gallery, $id)
+    public function destroy(gallery $gallery)
     {
-        $gallery = gallery::find($id);
-        $gallery->delete();
-        return back()->with('success', 'Imagem excluída com sucesso!');
+        //
     }
 }

@@ -48,9 +48,6 @@
       </div>
       <div class="modal-body">
         <input type="file" class="form-control" name="imagem" required>
-        <div>
-          <input type="text" class="form-control" name="descricao" placeholder="descrição" required>
-        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>

@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+<<<<<<< HEAD
 
 
 div.gallery {
@@ -29,3 +30,5 @@ div.gallery-item div.desc {
   text-align: center;
 }
 
+=======
+>>>>>>> parent of 0632c55 (metodo delete implementando na galeria)
