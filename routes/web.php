@@ -16,6 +16,9 @@ Route::get('/contrato', function () {
 Route::get('/welcome', function () {
     return view('welcome');
 })-> name('welcome')-> middleware('auth');
+Route::get('/oneYear', function () {
+    return view('oneYearPage');
+})-> name('OneYear')-> middleware('auth');
 
 // Route::get('/gallery', function () {
 //     return view('gallery');

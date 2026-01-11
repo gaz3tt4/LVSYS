@@ -8,14 +8,15 @@
             <div class="dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <div class="mt-4">
-                        <x-count-days></x-count-days>
-                        <a href="/oneYear">
-                            <x-button-love></x-button-love>
-                        </a>
-                    </div>
-                    <div>
-                    <div>
+                        <h1>1 ano da minha melhor escolha</h1>
 
+                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                            <video
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                controls>
+                                <source src="{{ asset('videos/meu-video.mp4') }}" type="video/mp4">
+                            </video>
+                        </div>
                     </div>
                 </div>
             </div>
