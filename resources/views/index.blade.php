@@ -9,9 +9,9 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <div class="mt-4">
                         <x-count-days></x-count-days>
-                        <a href="/oneYear">
+                        {{-- <a href="/oneYear">
                             <x-button-love></x-button-love>
-                        </a>
+                        </a> --}}
                     </div>
                     <div>
                     <div>

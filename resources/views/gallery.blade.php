@@ -17,6 +17,9 @@
                                 <div class="mt-4">
                                     <div>
                                         <img src="{{ asset('storage/' . $gallery->url) }}" alt="Imagem">
+                                        <a href="/gallery.destroy/{{ $gallery->id }}">
+                                            <danger-button>Deletar</danger-button>
+                                        </a>
                                     </div>
                                 </div>
                             @endforeach

@@ -45,6 +45,28 @@
         margin-top: 20px;
         color: red;
     }
+
+    .button-container {
+        display: none; /* Escondido por padrão */
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .button-container.show {
+        display: block;
+        animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
 </style>
 
 <div>
@@ -74,27 +96,43 @@
                 </div>
             </div>
             <p id="time-up" class="text-center"></p>
+
+            <!-- Botão que aparece apenas após 1 ano -->
+            <div id="button-container" class="button-container">
+                <h2 style="color: #fff; margin-bottom: 20px;">🎉 1 Ano Juntos! 🎉</h2>
+                <a href="{{ route('OneYear') }}">
+                    <x-button-love></x-button-love>
+                </a>
+            </div>
         </div>
     </div>
 </div>
 
 <script>
-    var deadline = new Date("{{ $date ?? '2025-01-12T01:30:25' }}").getTime();
+    var deadline = new Date("{{ $date ?? '2025-01-12T00:00:00' }}").getTime();
 
     var x = setInterval(function() {
         var currentTime = new Date().getTime();
         var t = currentTime - deadline;
-        var yars = Math.floor(t / (1000 * 60 * 60 * 24 * 365));
+        var years = Math.floor(t / (1000 * 60 * 60 * 24 * 365));
         var days = Math.floor(t / (1000 * 60 * 60 * 24));
         var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((t % (1000 * 60)) / 1000);
 
-        document.getElementById("year").innerText = yars;
+        document.getElementById("year").innerText = years;
         document.getElementById("day").innerText = days;
         document.getElementById("hour").innerText = hours;
         document.getElementById("minute").innerText = minutes;
         document.getElementById("second").innerText = seconds;
+
+        // Mostra o botão quando completar 1 ano ou mais
+        var buttonContainer = document.getElementById("button-container");
+        if (years >= 1) {
+            buttonContainer.classList.add("show");
+        } else {
+            buttonContainer.classList.remove("show");
+        }
 
         if (t < 0) {
             clearInterval(x);
@@ -104,6 +142,7 @@
             document.getElementById("hour").innerHTML = '0';
             document.getElementById("minute").innerHTML = '0';
             document.getElementById("second").innerHTML = '0';
+            buttonContainer.classList.remove("show");
         }
     }, 1000);
 </script>
