@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('url', 200);
             $table->string('Image', 50);
-            $table->timestamps('criate_at');
+            $table->timestamps();
         });
     }
 
