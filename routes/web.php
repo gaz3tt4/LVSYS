@@ -33,8 +33,11 @@ Route::middleware('auth')->group(function () {
 
 
 Route::middleware('auth')->group(function () {
-    Route::get('/index', [ProfileController::class, 'index'])->name('index');
+   // Route::get('/index', [ProfileController::class, 'index'])->name('index');
     Route::get('/welcome', [ProfileController::class, 'index'])->name('welcome');
+
+    // Route::get('register', [RegisteredUserController::class, 'create'])
+    //     ->name('register');
 });
 
 Route::middleware('auth')->group(function () {
